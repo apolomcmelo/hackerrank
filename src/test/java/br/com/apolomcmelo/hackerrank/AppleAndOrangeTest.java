@@ -1,4 +1,4 @@
-package test.java.br.com.apolomcmelo.hackerrank;
+package br.com.apolomcmelo.hackerrank;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,12 +17,11 @@ import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
 import br.com.apolomcmelo.hackerrank.algorithms.implementation.AppleAndOrange;
-import br.com.apolomcmelo.hackerrank.algorithms.warmup.AVeryBigSum;
 import br.com.apolomcmelo.hackerrank.factories.ChallengeFactory;
 import br.com.apolomcmelo.hackerrank.utils.Input;
 import br.com.apolomcmelo.hackerrank.utils.Reflection;
 
-//@RunWith(Parameterized.class)
+@RunWith(Parameterized.class)
 public class AppleAndOrangeTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -57,7 +56,6 @@ public class AppleAndOrangeTest {
 
     @Test
     public void solveChallengeTest() {
-        int n = 5;
         int[] result = (int[]) Reflection.genericInvokePrivateMethod(ChallengeFactory.startChallenge(AppleAndOrange.class), "solveChallenge", 8, 7, 11, 5, 15, 3, 2, new int[] {-2, 2, 1}, new int[] {5, -6});
 
         Assert.assertEquals(solveResult[0], result[0]);

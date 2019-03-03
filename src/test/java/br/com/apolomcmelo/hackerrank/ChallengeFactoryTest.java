@@ -1,4 +1,4 @@
-package test.java.br.com.apolomcmelo.hackerrank;
+package br.com.apolomcmelo.hackerrank;
 
 import org.junit.Assert;
 import org.junit.Test;
