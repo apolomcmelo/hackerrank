@@ -66,6 +66,6 @@ public class DiagonalDifferenceTest {
     public void executeTest() {
         ChallengeFactory.startChallenge(DiagonalDifference.class).execute(input);
 
-        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replace("\n", "")));
+        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replaceAll("[\\r\\n]", "")));
     }
 }

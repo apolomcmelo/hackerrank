@@ -22,7 +22,10 @@ public class Staircase implements IChallenge {
 
             sb.append(new String(spaces));
             sb.append(new String(characteres));
-            sb.append(breakline);
+            
+            if(i < n) {
+            	sb.append(breakline);            	
+            }
         }
 
         return sb.toString();

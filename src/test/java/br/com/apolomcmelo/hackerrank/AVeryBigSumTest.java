@@ -64,6 +64,6 @@ public class AVeryBigSumTest {
     public void executeTest() {
         ChallengeFactory.startChallenge(AVeryBigSum.class).execute(input);
 
-        Assert.assertEquals(testResult, Long.parseLong(outContent.toString().replace("\n", "")));
+        Assert.assertEquals(testResult, Long.parseLong(outContent.toString().replaceAll("[\\r\\n]", "")));
     }
 }

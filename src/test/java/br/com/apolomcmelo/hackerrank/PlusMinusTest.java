@@ -71,6 +71,6 @@ public class PlusMinusTest {
     public void executeTest() {
         ChallengeFactory.startChallenge(PlusMinus.class).execute(input);
 
-        Assert.assertEquals(executeResult, outContent.toString());
+        Assert.assertEquals(executeResult, outContent.toString().replaceAll("[\\r]", ""));
     }
 }

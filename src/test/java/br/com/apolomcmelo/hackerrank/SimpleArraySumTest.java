@@ -63,7 +63,6 @@ public class SimpleArraySumTest {
     @Test
     public void executeTest() {
         ChallengeFactory.startChallenge(SimpleArraySum.class).execute(input);
-
-        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replace("\n", "")));
+        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replaceAll("[^0-9]", "")));
     }
 }

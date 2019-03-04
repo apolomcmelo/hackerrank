@@ -63,6 +63,6 @@ public class TimeConversionTest {
     public void executeTest() {
         ChallengeFactory.startChallenge(TimeConversion.class).execute(input);
 
-        Assert.assertEquals(testResult, outContent.toString().replace("\n", ""));
+        Assert.assertEquals(testResult, outContent.toString().replaceAll("[\\r\\n]", ""));
     }
 }

@@ -68,6 +68,6 @@ public class SolveMeFirstTest {
     public void executeTest() {
         ChallengeFactory.startChallenge(SolveMeFirst.class).execute(input);
 
-        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replace("\n", "")));
+        Assert.assertEquals(testResult, Integer.parseInt(outContent.toString().replaceAll("[\\r\\n]", "")));
     }
 }

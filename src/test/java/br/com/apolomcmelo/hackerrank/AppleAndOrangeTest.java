@@ -9,7 +9,6 @@ import java.util.Scanner;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,17 +28,23 @@ public class AppleAndOrangeTest {
     public Input input;
 
     @Parameter(1)
-    public int[] arr;
-
+    public int[] arrParams;
+    
+    @Parameter(2)
+    public int[] paramApples;
+    
     @Parameter(3)
-    public String executeResult;
+    public int[] paramOranges;
     
     @Parameter(4)
     public int[] solveResult;
-
+    
+    @Parameter(5)
+    public String executeResult;
+    
     @Parameters
     public static Collection<Object[]> data() {
-        Object[][] data = new Object[][] {{new Input(new Scanner("7\n11\n5\n15\n3\n2\n-2\n2\n1\n5\n-6")), 7, 11, 5, 15, 3, 2, new int[] {-2, 2, 1}, new int[] {5, -6}, "1\n1\n"}};
+        Object[][] data = new Object[][] {{new Input(new Scanner("7\n11\n5\n15\n3\n2\n-2\n2\n1\n5\n-6")), new int[] {7, 11, 5, 15, 3, 2}, new int[] {-2, 2, 1}, new int[] {5, -6}, new int[] {1, 1}, "1\n1\n"}};
 
         return Arrays.asList(data);
     }
@@ -56,17 +61,16 @@ public class AppleAndOrangeTest {
 
     @Test
     public void solveChallengeTest() {
-        int[] result = (int[]) Reflection.genericInvokePrivateMethod(ChallengeFactory.startChallenge(AppleAndOrange.class), "solveChallenge", 8, 7, 11, 5, 15, 3, 2, new int[] {-2, 2, 1}, new int[] {5, -6});
+        int[] result = (int[]) Reflection.genericInvokePrivateMethod(ChallengeFactory.startChallenge(AppleAndOrange.class), "solveChallenge", 8, arrParams[0], arrParams[1], arrParams[2], arrParams[3], arrParams[4], arrParams[5], paramApples, paramOranges);
 
         Assert.assertEquals(solveResult[0], result[0]);
         Assert.assertEquals(solveResult[1], result[1]);
     }
 
     @Test
-    @Ignore
     public void executeTest() {
         ChallengeFactory.startChallenge(AppleAndOrange.class).execute(input);
 
-        Assert.assertEquals(executeResult, Long.parseLong(outContent.toString().replace("\n", "")));
+        Assert.assertEquals(executeResult, outContent.toString().replaceAll("[\\r]", ""));
     }
 }
