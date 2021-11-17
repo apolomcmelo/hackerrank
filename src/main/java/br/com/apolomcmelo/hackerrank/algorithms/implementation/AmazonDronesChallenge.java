@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import br.com.apolomcmelo.hackerrank.interfaces.IChallenge;
 import br.com.apolomcmelo.hackerrank.utils.Input;
 
-public class DronesChallenge implements IChallenge {
+public class AmazonDronesChallenge implements IChallenge {
 
     private List<Integer> solveChallenge(Integer numberOfRequiredDrones, List<Drone> drones, List<Integer> inMaintenanceDrones) {
 

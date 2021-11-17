@@ -4,7 +4,7 @@ import br.com.apolomcmelo.hackerrank.interfaces.IChallenge;
 import br.com.apolomcmelo.hackerrank.utils.Input;
 import br.com.apolomcmelo.hackerrank.utils.Printer;
 
-public class DeliverySystemChallenge implements IChallenge {
+public class AmazonDeliverySystemChallenge implements IChallenge {
 
     private int solveChallenge(int tripMaxWeight, int[] packagesWeight) {
         int trips = 0;

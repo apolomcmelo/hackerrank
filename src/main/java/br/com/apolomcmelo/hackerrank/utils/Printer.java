@@ -45,5 +45,15 @@ public class Printer {
         for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + (i < data.length ? " " : ""));
         }
-    }   
+    }
+
+    public static void printMatrixOutput(int n, int mat[][]) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(" " + mat[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }

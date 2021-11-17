@@ -1,17 +1,31 @@
 package br.com.apolomcmelo.hackerrank;
 
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.AmountOfChoices;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.BalancedBrackets;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.CoinChange;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.FruitPromotion;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.IsBinarySearchTree;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.KthPermutation;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.LevelOrderTraversalBinaryTree;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.MergeSortedLists;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.PrintPossibleBrackets;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.ReverseWordsOfSentence;
+import br.com.apolomcmelo.hackerrank.algorithms.amazon.practice.StringSegmentation;
+import br.com.apolomcmelo.hackerrank.utils.Functions;
+import br.com.apolomcmelo.hackerrank.utils.Printer;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import br.com.apolomcmelo.hackerrank.factories.ChallengeFactory;
-import br.com.apolomcmelo.hackerrank.tests.FeedzaiAubay;
 import br.com.apolomcmelo.hackerrank.utils.Input;
 import br.com.apolomcmelo.hackerrank.utils.Timer;
 
@@ -29,7 +43,14 @@ public class App {
     public static void run() {
         Scanner in = new Scanner(System.in);
         Input input = new Input(in);
-        ChallengeFactory.startChallenge(FeedzaiAubay.class).execute(input);
+
+
+
+      List<Integer> prices = Arrays.asList(1, 4, 8, 4);
+      Set<Integer> test = prices.stream().sorted().collect(Collectors.toSet());
+
+
+        ChallengeFactory.startChallenge(AmountOfChoices.class).execute(input);
     }
 
 
